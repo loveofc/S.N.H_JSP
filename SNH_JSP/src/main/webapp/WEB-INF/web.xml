@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>SNH_JSP</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-  </welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>SNH_JSP</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	
+	<!-- DB정보 시작-->
+	<context-param>
+		<param-name>OracleDriver</param-name>
+		<param-value>oracle.jdbc.OracleDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleURL</param-name>
+		<param-value>jdbc:oracle:thin:@DESKTOP-R70HQ54:1521:xe</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleId</param-name>
+		<param-value>c##musthave</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OraclePwd</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+	<!-- DB정보 끝-->
+
+	<context-param>
+		<param-name>INIT_PARAM</param-name>
+		<param-value>web.xml에 저장한 초기화 매개변수</param-value>
+	</context-param>
+
+	<error-page>
+		<error-code>404</error-code>
+		<!-- location 경로를 명시할 때는 컨텍스트 루트를 제외한 나머지를 기술, 경로는 슬래시(/)로 시작 
+			 ex) http://localhost:8080/SNH_JSP/implicitObject/applicationMain.jsp 
+			 http://localhost:8080/SNH_JSP 부분 제외 
+		-->
+		<location>/implicitObject/exception.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+
+		<location>/implicitObject/exception.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/implicitObject/exception.jsp</location>
+	</error-page>
 </web-app>
