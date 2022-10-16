@@ -12,9 +12,9 @@
 		<a href="../session/logout.jsp">로그아웃</a>		
 		<%}%>
 		&nbsp;&nbsp;&nbsp;
-		<a href="../session/logout.jsp">게시판(페이징x)</a>	
+		<a href="../board/list.jsp">게시판(페이징x)</a>	
 		&nbsp;&nbsp;&nbsp;
-		<a href="../session/logout.jsp">게시판(페이징o)</a>	
+		<a href="../pagingBoard/list.jsp">게시판(페이징o)</a>	
 		</td>
 	</tr>
 </table>

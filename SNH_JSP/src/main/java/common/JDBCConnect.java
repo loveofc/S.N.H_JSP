@@ -31,7 +31,7 @@ public class JDBCConnect {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("DB 연결 성공(기본 생성자)");
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,7 +52,7 @@ public class JDBCConnect {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("DB 연결 성공(매개변수 4개 생성자)");
+		
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -73,7 +73,7 @@ public class JDBCConnect {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("DB 연결 성공(application 생성자)");
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

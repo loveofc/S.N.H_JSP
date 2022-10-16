@@ -53,6 +53,15 @@
 		<param-name>INIT_PARAM</param-name>
 		<param-value>web.xml에 저장한 초기화 매개변수</param-value>
 	</context-param>
+	<!-- paging 처리 -->
+	<context-param>
+		<param-name>pages_per_page</param-name>
+		<param-value>10</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pages_per_block</param-name>
+		<param-value>5</param-value>
+	</context-param>
 
 	<error-page>
 		<error-code>404</error-code>
